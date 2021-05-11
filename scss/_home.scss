@@ -1,0 +1,1280 @@
+// 1. INTRO
+// 2. SERVICE
+// 3. FAMOUS-PETS
+  // 3.1. FAMOUS-PETS CAROUSEL
+// 4. PET-AND-FEED
+// 5. TESTIMONIALS
+// 6. ZOOGEOGRAPHY
+
+.intro {
+  width: 100%;
+  max-width: 1616px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  column-gap: 2%;
+  padding-top: 54px;
+  padding-bottom: 27px;
+
+  @include mq-medium-desk{
+    padding-top: 60px;
+    max-width: 1400px;
+  }
+  @include mq-small-desk {
+    padding-bottom: 100px;
+  }
+
+  @include mq-tablet-m {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  @include mq-tablet-s {
+    padding-top: 148px;
+    padding-bottom: 60px;
+  }
+
+  &__text-content {
+    padding: 80px 0 0;
+    width: 100%;  
+    max-width: 700px;
+
+    @include mq-medium-desk {
+      padding: 42px 0 0;
+      max-width: 670px;
+    }
+
+    @include mq-small-desk {
+      max-width: 543px;
+    }
+
+    @include mq-tablet-m {
+      max-width: 420px;
+    }
+
+    @include mq-tablet-s {
+      padding: 8px 0 0;
+      max-width: 316px;
+    }
+  }
+
+  &__tag {
+    margin-bottom: 25px;
+
+    color: $gray;
+
+    @include mq-medium-desk {
+      margin-bottom: 35px;
+    }
+
+    @include mq-medium-desk {
+      margin-bottom: 30px;
+    }
+
+    @include mq-tablet-s {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include mq-tablet-s {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__red-dot {
+    position: relative;
+  
+    &::after {
+      position: absolute;
+      top: 11%;
+      left: 30%;
+      transform: translateX(-9%);
+
+      content: "";
+      width: 100%;
+      height: 100%;
+
+      background: url(../assets/icons/dot.svg) no-repeat;
+      background-size: 60%;
+
+      @include mq-tablet-m {
+        top: 10%;
+        left: 30%;
+      }
+    } 
+  }
+
+  &__media {
+    display: block;
+    max-width: 696px;
+    height: 100%;
+    max-height: 673px;
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    @include mq-medium-desk {
+      max-height: 456px;
+    }
+
+    @include mq-tablet-m {
+      max-height: 370px;
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__btn-cont {
+    max-width: 572px;
+
+    @include mq-medium-desk {
+      max-width: 485px;
+    }
+
+    @include mq-small-desk {
+      max-width: 468px;
+    }
+
+    @include mq-tablet-m {
+      max-width: 415px;
+    }
+  }
+
+  &__btn-cont .btn:last-child {
+    @include mq-tablet-s {
+      display: none;
+    }
+  }
+}
+
+// 2. SERVICE
+.service {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 13.8%;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  
+  @include mq-small-desk {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    column-gap: 3.2%;
+  }
+
+  @include mq-tablet-m {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  @include mq-tablet-s {
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+  }
+
+  &__text-content {
+    display: inline-block;
+    vertical-align: top;
+    padding: 140px 0 0;
+    width: 100%;
+    max-width: 696px;
+
+    @include mq-medium-desk {
+      padding: 57px 0 0;
+    }
+
+    @include mq-tablet-m {
+      padding: 30px 0 0;
+    }
+
+    @include mq-tablet-s {
+      padding: 0 0 40px;
+      text-align: center;
+    }
+  }
+
+  &__tag {
+    margin-bottom: 50px;
+
+    @include mq-medium-desk {
+      margin-bottom: 48px;
+    }
+
+    @include mq-medium-desk {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 37px;
+
+    @include mq-medium-desk {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 50px;
+
+    @include mq-medium-desk {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__media {
+    display: block;
+    width: 100%;
+    max-width: 512px;
+    height: 100%;
+    max-height: 760px;
+    
+    overflow: hidden;
+
+
+    border-radius: 5px;
+
+    @include mq-small-desk {
+      max-width: 401px;
+    }
+
+    @include mq-tablet-m {
+      max-width: 390px;
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+}
+
+
+// 3. FAMOUS-PETS
+.famous-pets {
+  background-color: $wight-blue;
+
+  &__inner {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 2.75%;
+
+    @include mq-small-desk {
+      padding-top: 94px;
+      padding-bottom: 94px;
+      gap: 3.3%;
+    }
+
+    @include mq-tablet-s {
+      padding: 60px 0 80px;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+
+  &__text-content {
+    width: 100%;
+    max-width: 325px;
+    padding-top: 218px;
+
+    @include mq-small-desk {
+      padding-top: 125px;
+      max-width: 255px;
+    }
+
+    @include mq-tablet-m {
+      padding-top: 82px;
+    }
+
+    @include mq-tablet-s {
+      padding: 0;
+      text-align: center;
+      margin-bottom: 70px;
+      
+    }
+  }
+
+  &__tag {
+    margin-bottom: 50px;
+
+    @include mq-small-desk {
+      margin-bottom: 51px;
+    }
+
+    @include mq-tablet-s {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 55px;
+
+    @include mq-small-desk {
+      margin-bottom: 32px;
+    }
+
+    @include mq-tablet-s {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__btn-cont {
+    @include mq-tablet-s {
+      margin: 0 auto;
+    }
+  }
+
+  &__carousel {
+    max-width: 1064px;
+    max-height: 696px;
+
+    @include mq-small-desk {
+      max-width: 546px;
+    }
+
+    @include mq-tablet-m {
+      max-width: 180*3+30*2px;
+    }
+
+    @include mq-tablet-s {
+      max-width: 180*3+30*2+30px;
+      padding: 0 15px;
+    }
+  }
+}
+
+// 3.1. FAMOUS-PETS CAROUSEL
+.carousel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &__list {
+    // 5 это количество карточек в слайдере
+    width: 328*5+40*4px; 
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+
+    @include mq-small-desk {
+      width: 258*5+30*4px;
+    }
+
+    @include mq-tablet-m {
+      width: 180*5+30*4px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    width: 328px;
+    height: 328px;
+    overflow: hidden;
+
+    color: $white;
+    border-radius: 5px;
+    background-color: $light-blue;
+
+    @include mq-small-desk {
+      width: 258px;
+      height: 258px;
+    }
+
+    @include mq-tablet-m {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &__item-link {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+    color: $white;
+
+    background-color: rgb(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__item-circle {
+    position: absolute;
+    top: 163px;
+    left: 50%;
+
+    width: 76px;
+    height: 76px;
+
+    border-radius: 50%;
+    border: 2px solid $white;
+    background: url(../assets/icons/plus-icon.svg) no-repeat;
+    background-position: center;
+    background-size: 35%;
+
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+
+    @include mq-small-desk {
+      top: 131px;
+
+      width: 59px;
+      height: 59px;
+    }
+
+    @include mq-tablet-m {
+      top: 92px;
+
+      width: 41px;
+      height: 41px;
+    }
+  }
+
+  &__item-name, &__item-follow {
+    font-weight: 500;
+    line-height: 120%;
+    color: $white;
+  }
+
+  &__item-name {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
+    opacity: 1;
+    transform: translateX(-50%);
+
+    @include mq-tablet-m {
+      bottom: 15px;
+    }
+  }
+
+  &__item-follow {
+    position: absolute;
+    bottom: 20px;
+    left: 47%;
+
+    display: inline-block;
+
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.1s linear;
+
+    @include mq-tablet-m {
+      bottom: 15px;
+    }
+  }
+
+  &__item-follow::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -33px;
+
+    width: 21px;
+    height: 13px;
+
+    background: url(../assets/icons/arrow-next.svg) no-repeat;
+    background-size: 100%;
+
+    @include mq-tablet-m {
+      background-size: 70%;
+      right: -27px;
+    }
+  }
+
+  &__item-descr {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+
+    width: 189px;
+
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(2);
+    transition: all 0.3s ease-in-out;
+
+    @include mq-small-desk {
+      width: 170px;
+    }
+
+    @include mq-tablet-m {
+      width: 110px;
+    }
+  }
+}
+
+.carousel__item:hover {
+
+  .carousel__item-img {
+    transform: scale(1.1);
+  }
+
+  .carousel__item-link {
+    background-color: rgb(0, 0, 0, .3);
+  }
+
+  .carousel__item-circle {
+    top: 30px;
+    left: 50%;
+
+    width: 238px;
+    height: 238px;
+    background-size: 0;
+
+    @include mq-small-desk {
+      top: 23px;
+
+      width: 184px;
+      height: 184px;
+    }
+
+    @include mq-tablet-m {
+      top: 16px;
+
+      width: 129px;
+      height: 129px;
+    }
+  }
+
+  .carousel__item-name {
+    opacity: 0;
+  }
+
+  .carousel__item-follow {
+    opacity: 1;
+  }
+
+  .carousel__item-descr {
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+  }
+}
+
+// 4. PET-AND-FEED
+.feed {
+  padding-top: 101px;
+  padding-bottom: 101px;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include mq-small-desk {
+    padding-top: 100px;
+    padding-bottom: 109px;
+  }
+
+  @include mq-tablet-s {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  &__tag {
+    margin-left: 185px;
+
+    @include mq-small-desk {
+      margin-left: 0;
+    }
+  }
+
+  &__benefit-list {
+    padding-top: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include mq-small-desk {
+      padding-top: 80px;
+      align-items: flex-end;
+    }
+
+    @include mq-tablet-s {
+      padding-top: 0;
+      align-items: center;
+    }
+  }
+}
+
+.benefit-item {
+  width: 100%;
+  max-width: 824px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 6.5%;
+
+  @include mq-small-desk {
+    max-width: 832px;
+    gap: 5.5%;
+  }
+
+  @include mq-tablet-s {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__media {
+    width: 312px;
+    height: 312px;
+
+    @include mq-small-desk {
+      width: 242px;
+      height: 242px;
+    }
+
+    @include mq-tablet-s {
+      width: 180px;
+      height: 180px;
+    }
+
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 456px;
+
+    @include mq-small-desk {
+      max-width: 428px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+
+    @include mq-small-desk {
+      margin-bottom: 21px;
+    }
+  }
+
+  &--security {
+    position: relative;
+    left: 11.5%;
+
+    margin-bottom: 60px;
+
+    @include mq-small-desk {
+      left: 0;
+      margin-bottom: 46px;
+    }
+
+    .benefit-item__content{
+      padding-top: 56px;
+
+      @include mq-small-desk {
+        padding-top: 52px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -45px;
+      right: 146px;
+    
+
+      width: 207px;
+      height: 99px;
+
+      background: url(../assets/img/home_page/pay&feed/arrow-1.svg) no-repeat;
+
+      @include mq-small-desk {
+        display: none;
+      }
+    }
+  }
+
+  &--delivery {
+    position: relative;
+    right: 3.5%;
+    align-self: flex-end;
+
+    margin-bottom: 47px;
+
+    @include mq-small-desk {
+      right: 0;
+      margin-bottom: 73px;
+      align-self: inherit;
+    }
+
+    .benefit-item__content {
+      padding-top: 104px;
+
+      @include mq-small-desk { 
+        padding-top: 66px; 
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -31px;
+      left: -268px;
+    
+
+      width: 242px;
+      height: 198px;
+
+      background: url(../assets/img/home_page/pay&feed/arrow-2.svg) no-repeat;
+
+      @include mq-small-desk {
+        display: none;
+      }
+    }
+
+
+  }
+
+  &--meeting {
+
+    .benefit-item__content {
+      padding-top: 41px;
+
+      @include mq-small-desk {
+        padding-top: 33px;
+      }
+    }
+  }
+}
+
+// 5. TESTIMONIALS
+%testimonals-font-color { color: $white; }
+
+.testimonials {
+  @extend %testimonals-font-color;
+
+  background-color: $dark-blue;
+
+  &__inner {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 2.45%;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include mq-small-desk {
+      padding-top: 108px;
+      padding-bottom: 80px;
+      gap: 3%;
+    }
+
+    @include mq-tablet-s {
+      flex-flow: column nowrap;
+      align-items: center;
+      padding-top: 80px;
+      padding-bottom: 103px;
+
+      text-align: center;
+    }
+  }
+
+  &__text-content {
+    width: 100%;
+    max-width: 512px;
+
+    @include mq-small-desk { 
+      max-width: 400px;
+    }
+
+    @include mq-tablet-m {
+      max-width: 350px;
+    }
+
+    @include mq-tablet-s {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    overflow: hidden;
+
+    @include mq-tablet-s {
+      
+    }
+  }
+
+  &__tag {
+    @extend %testimonals-font-color;
+    margin-bottom: 62px;
+
+    @include mq-small-desk { 
+      margin-bottom: 40px; 
+    }
+
+    @include mq-tablet-s {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__subtitle {
+    @extend %testimonals-font-color;
+    margin-bottom: 41px;
+
+    @include mq-tablet-s {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    @include mq-small-desk {
+      margin-bottom: 62px;
+    }
+
+    @include mq-tablet-s {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__btn-link {
+    margin-bottom: 24px;
+  }
+
+  &__carousel {
+    width: 100%;
+    max-width: 1064px;
+    max-height: 273px;
+    margin-bottom: 29px;
+
+    @include mq-small-desk {
+      max-width: 454px;
+    }
+
+    @include mq-tablet-m {
+      max-width: 520px;
+    }
+
+    @include mq-tablet-s {
+      max-width: 454px;
+      margin: 0 auto 29px;
+    }
+  }
+
+  &__list {
+    // 3 это количество отзывов в слайдере
+    width: 512*3+40*2px; 
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 40px;
+
+    color: $dark;
+
+    @include mq-small-desk {
+      width: 454*3+30*2px; 
+    }
+
+    @include mq-tablet-m {
+      width: 300*3+30*2px; 
+      gap: 20px;
+    }
+
+    @include mq-tablet-s {
+      width: 454*3+30*2px; 
+    }
+  }
+
+  &__item {
+    padding: 40px;
+    width: 512px;
+    height: 273px;
+
+    background-color: $white;
+    border-radius: 15px;
+
+    @include mq-small-desk {
+      padding: 30px;
+      width: 454px;
+      height: 235px;
+    }
+
+    @include mq-tablet-m {
+      width: 300px;
+      height: 235px;
+    }
+
+    @include mq-tablet-s {
+      width: 454px;
+      height: 235px;
+    }
+  }
+
+  &__item-user {
+    margin-bottom: 31px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    @include mq-small-desk {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__item-img {
+    display: inline-block;
+    margin-right: 19px;
+
+    line-height: 0;
+  }
+
+  &__item-name {
+    display: inline-block;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 135%;
+
+    @include mq-small-desk {
+      font-size: 18px;
+    }
+  }
+
+  &__item-text {
+    &::before {
+      content: "“";
+    }
+    &::after {
+      content: "”";
+    }
+  }
+
+  &__btn-cont {
+    @include mq-tablet-s {
+      margin: 0 auto;
+    }
+  }
+}
+
+// 6. ZOOGEOGRAPHY
+.zoogeography {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 112px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap:2.45%;
+
+  @include mq-small-desk {
+    padding-top: 102px;
+    padding-bottom: 100px;
+    gap: 1%;
+  }
+
+  @include mq-tablet-m {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  @include mq-tablet-s {
+    padding-top: 400px;
+  }
+
+  &__text-cont {
+    padding-top: 50px;
+    max-width: 327px;
+
+    @include mq-small-desk {
+      padding-top: 0;
+    }
+  }
+
+  &__tag {
+    margin-bottom: 60px;
+
+    @include mq-tablet-m {
+      margin-bottom: 45px;
+    }
+
+    @include mq-tablet-s {
+      display: none; 
+    }
+  }
+
+  &__tooltip {
+
+    @include mq-tablet-s {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      z-index: 2;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__map {
+    position: relative;
+    width: 100%;
+    max-width: 1223px;
+    height: 100%;
+    max-height: 700px;
+
+    @include mq-small-desk {
+      padding-top: 84px;
+      max-width: 675px;
+      max-height: 389px;
+    }
+
+    @include mq-tablet-m {
+      padding-top: 45px;
+    }
+
+    @include mq-tablet-s {
+      margin: 0 auto;
+      padding-top: 0;
+    }
+  }
+
+  &__map-cont {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__map-img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.tooltip {
+  width: 344px;
+  height: 512px;
+  overflow: hidden;
+
+  text-align: center;
+  border-radius: 15px;
+  background-color: $white;
+  box-shadow: 4px 12px 22px rgba(0, 0, 0, 0.06);
+
+  @include mq-small-desk {
+    width: 292px;
+    height: 448px;
+  }
+
+  @include mq-tablet-m {
+    width: 250px;
+    height: 390px;
+  }
+
+  &__media {
+    display: block;
+    width: 100%;
+    max-height: 218px;
+    overflow: hidden;  
+
+    @include mq-small-desk {
+      max-height: 194px;  
+    }
+
+    @include mq-tablet-m {
+      max-height: 158px;  
+    }
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__content {
+    padding: 20px 40px; 
+    height: 224px;
+    overflow: hidden;
+
+    @include mq-small-desk {
+      padding: 20px 14px; 
+      height: 192px;
+    }
+
+    @include mq-tablet-m {
+      padding: 20px 25px;
+      height: 186px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    @include mq-small-desk {
+      margin-bottom: 16px; 
+    }
+  }
+}
+
+.marker {
+  position: relative;
+  width: 69px;
+  height: 89px;
+
+  transition: all 0.1s linear;
+
+  @include mq-small-desk {
+    width: 37px;
+    height: 47px;
+  }
+
+  &__base {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(1px 12px 22px rgba(0, 0, 0, 0.09));
+  }
+
+  &__icon {
+    width: 55.072%;
+    height: 53.932%;
+  
+    position: absolute;
+    top: 12.5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--position {
+   
+    &--eagle {
+      position: absolute;
+      top: 30.428%;
+      left: 13%;
+
+      @include mq-small-desk {
+        top: 50.428%;
+        left: 11.5%;
+      }
+
+      @include mq-tablet-m {
+        top: 39.428%;
+        left: 11.5%;
+      }
+
+      @include mq-tablet-s {
+        top: 27.428%;
+        left: 11.5%;
+      }
+    }
+
+    &--alligator {
+      position: absolute;
+      top: 30.714%;
+      left: 22.368%;
+
+      @include mq-small-desk {
+        top: 53%;
+        left: 22%;
+      }
+
+      @include mq-tablet-m {
+        top: 42%;
+        left: 22%;
+      }
+
+      @include mq-tablet-s {
+        top: 30%;
+        left: 22%;
+      }
+    }
+
+    &--gorilla {
+      position: absolute;
+      top: 49%;
+      left: 48.601%;
+
+      @include mq-small-desk {
+        top: 66%;
+        left: 45.9%;
+      }
+
+      @include mq-tablet-m {
+        top: 55%;
+        left: 45.9%;
+      }
+
+      @include mq-tablet-s {
+        top: 43%;
+        left: 45.9%;
+      }
+    }
+
+    &--panda {
+      position: absolute;
+      top: 29.142%;
+      left: 74.753%;
+
+      @include mq-small-desk {
+        top: 50.3%;
+        left: 73%;
+      }
+
+      @include mq-tablet-m {
+        top: 39.3%;
+        left: 73%;
+      }
+
+      @include mq-tablet-s {
+        top: 27.3%;
+        left: 73%;
+      }
+    }
+  }
+
+  &--active {
+    transform: scale(1.3) translateY(-12%);
+    stroke:#609FFF;
+    stroke-width: 3;
+  }
+}
+
+.marker:hover {
+  transform: scale(1.3) translateY(-12%);
+  stroke:#609FFF;
+  stroke-width: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+// BREAKPOINTS
+
+@mixin mq-medium-desk {
+  @media (max-width: 1600px){
+    @content;
+  }
+}
+
+@mixin mq-small-desk {
+  @media (max-width: 1440px) { 
+    @content;
+  }
+}
+
+@mixin mq-tablet-m {
+  @media (max-width: 1080px) { 
+    @content;
+  }
+}
+
+@mixin mq-tablet-s {
+  @media (max-width: 940px) { 
+    @content;
+  }
+}
+
+$mobile: 320px;
